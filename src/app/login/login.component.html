@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 col-12">
+            <h2>Login</h2>
+            <form class="example-form" [formGroup]="loginForm" (ngSubmit)="checkLogin()">
+                <mat-form-field hintLabel="Max 10 characters">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" name="uname">       
+                  </mat-form-field>
+                  <mat-form-field hintLabel="Max 10 characters">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" name="pwd">
+                  </mat-form-field>
+                  
+                <button class="btn btn-success" [disabled]="!loginForm.valid" type="submit">Login</button>
+                <button class="btn btn-danger" type="reset">Cancel</button>
+
+                </form>
+        </div>
+    </div>
+</div>
